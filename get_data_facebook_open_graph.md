@@ -4,7 +4,7 @@
 <?php
 function fetch_og($url)
 {
-    data = file_get_contents(url);
+    $data = file_get_contents(url);
     $dom = new DomDocument;
     @$dom->loadHTML($data);
      
@@ -46,7 +46,7 @@ echo "<hr>";
 
 echo "<h1>Data Facebook Kangyasin.com</h1>";
 echo "<h3>Link: <small><small>http://www.kangyasin.com/2017/12/memilih-kamera-handphone-untuk-fotografi.html</small></small></h3>";
-foreach (og as $key => $value) {
+foreach ($og as $key => $value) {
     echo "<strong>key:</strong> ".$value;
     echo "<br>";
 }
